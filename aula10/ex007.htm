@@ -7,6 +7,26 @@
     <title>Somando números</title>
 </head>
 <body>
-    
+    <h1>Numbers</h1>
+    <input type="number" name="txtn1" id="txtn1">
+     + 
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" onclick="somar()"><br>
+    Resultado: <div id="res"></div>
+
+<script>
+    function somar() {
+        const tn1 = document.getElementById('txtn1')
+        const tn2 = document.querySelector('input#txtn2')
+        const res = document.querySelector('div#res')
+
+        const n1 = Number(tn1.value)
+        const n2 = Number(tn2.value)
+        const soma = n1 + n2
+
+        res.innerHTML = `A soma de ${n1} + ${n2} é igual a: ${soma}.`    
+    }
+</script>
+
 </body>
 </html>

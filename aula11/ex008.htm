@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditions</title>
+</head>
+<body>
+    <h4>Vamos verificar se você pode tirar carteira de motorista:</h4>
+
+    <p id="nome">Qual o seu nome? </p>
+    <input type="text" name="nome" id="nome">
+    <hr>
+
+    <p>Qual a sua idade? </p>
+    <input type="number" value='number' name="idade" id="idade">
+    <input type="submit" value="avaliar" onclick="tirar()">
+    <hr>
+    <div id='answer'></div>
+    <script>
+        function tirar(){
+            const age = document.querySelector('input#idade')
+            const ageMaior = Number(age.value)
+            const name = document.querySelector('input#nome')
+            const nameCNH = String(name.value)
+            
+            if (ageMaior >= 18){
+                answer.innerHTML = `Olá ${nameCNH}, você tem ${ageMaior} anos, pode tirar CNH.`}else{
+                    answer.innerHTML = `Olá ${nameCNH}, você tem ${ageMaior} anos, é de menor, não pode tirar CNH.`
+                }
+            }
+    </script>
+</body>
+</html>

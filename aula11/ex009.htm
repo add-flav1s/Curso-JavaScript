@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditions</title>
+</head>
+<body>
+    <h2>Verificando a velocidade do carro: </h2>
+
+    Velocidade: <input type="number" name="txtvel" id="txtvel">
+    <input type="button" value="Enviar" onclick="calcular()">
+    Km/h.
+<hr>
+    <div id="resultado"></div>
+
+    <script>
+    function calcular() {
+        const vel = document.querySelector('input#txtvel')
+        const resultado = document.querySelector('div#resultado')
+        const velnum = Number(vel.value)
+
+        if (velnum >= 80){
+            resultado.innerHTML = (`Você está a ${velnum}Km/h, dirija mais devagar, MULTADO!`)
+        }else{
+            resultado.innerHTML = (`Você está a ${velnum}Km/h, boa viagem e use o cinto de segurança.`)
+        }
+    }
+    </script>
+</body>
+</html>
